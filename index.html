@@ -5,36 +5,219 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>転生したらスライムだった件 MOD Wiki</title>
   <style>
-    body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.75;background:#f6f7fb;color:#222}
-    header,main,footer{max-width:1100px;margin:0 auto;padding:20px}
-    header{background:#1f2937;color:#fff}
-    section{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:20px;margin:18px 0}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
-    .card{border:1px solid #e5e7eb;border-radius:12px;padding:16px;background:#fff}
-    .card a{color:#2563eb;text-decoration:none;font-weight:700}
-    .note{color:#6b7280;font-size:.95em}
+    :root{
+      --bg:#0f172a;
+      --panel:#111827;
+      --card:#ffffff;
+      --line:#e5e7eb;
+      --text:#111827;
+      --muted:#6b7280;
+      --accent:#2563eb;
+      --accent2:#dbeafe;
+    }
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      line-height:1.7;
+      background:linear-gradient(180deg,#f8fafc 0%,#eef2ff 100%);
+      color:var(--text);
+    }
+    header{
+      background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);
+      color:#fff;
+      padding:28px 20px;
+      box-shadow:0 8px 24px rgba(15,23,42,.12);
+    }
+    .wrap{max-width:1120px;margin:0 auto;}
+    .hero{
+      display:flex;
+      gap:18px;
+      align-items:flex-start;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+    .title h1{margin:0 0 8px;font-size:2rem}
+    .title p{margin:0;color:#cbd5e1}
+    .badge{
+      display:inline-block;
+      margin-top:10px;
+      padding:4px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.15);
+      color:#e2e8f0;
+      font-size:.9rem;
+    }
+    nav{
+      background:#fff;
+      border-bottom:1px solid var(--line);
+    }
+    .navwrap{
+      max-width:1120px;
+      margin:0 auto;
+      padding:12px 20px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .navwrap a{
+      text-decoration:none;
+      color:var(--accent);
+      background:var(--accent2);
+      border:1px solid #bfdbfe;
+      padding:7px 12px;
+      border-radius:999px;
+      font-weight:600;
+    }
+    main{max-width:1120px;margin:0 auto;padding:20px}
+    section{
+      background:rgba(255,255,255,.88);
+      backdrop-filter:blur(6px);
+      border:1px solid rgba(229,231,235,.9);
+      border-radius:16px;
+      padding:20px;
+      margin:18px 0;
+      box-shadow:0 8px 20px rgba(15,23,42,.05);
+    }
+    section h2{margin-top:0}
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:14px;
+    }
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:16px;
+      box-shadow:0 4px 12px rgba(15,23,42,.04);
+      transition:transform .15s ease, box-shadow .15s ease;
+    }
+    .card:hover{
+      transform:translateY(-2px);
+      box-shadow:0 10px 24px rgba(15,23,42,.08);
+    }
+    .card a{
+      color:var(--accent);
+      text-decoration:none;
+      font-weight:800;
+      font-size:1.05rem;
+    }
+    .card p{margin:8px 0 0;color:var(--muted)}
+    table{
+      width:100%;
+      border-collapse:collapse;
+      overflow:hidden;
+      border-radius:12px;
+      display:block;
+      overflow-x:auto;
+      background:#fff;
+    }
+    th,td{
+      border:1px solid var(--line);
+      padding:10px 12px;
+      text-align:left;
+      vertical-align:top;
+      white-space:nowrap;
+    }
+    th{background:#f8fafc}
+    .links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:14px;
+    }
+    .links a{
+      color:var(--accent);
+      text-decoration:none;
+      font-weight:700;
+    }
+    .note{color:var(--muted);font-size:.95rem}
+    footer{
+      max-width:1120px;
+      margin:0 auto;
+      padding:10px 20px 30px;
+      color:var(--muted);
+      font-size:.92rem;
+    }
+    @media (max-width:640px){
+      .title h1{font-size:1.6rem}
+      section{padding:16px}
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>転生したらスライムだった件 MOD Wiki</h1>
-    <p>tensura.wiki.gg をもとにした個人用Wikiです。</p>
-    <p class="note">用語は wiki.gg の本文と MOD 言語ファイルを基準に整理しています。</p>
+    <div class="wrap hero">
+      <div class="title">
+        <h1>転生したらスライムだった件 MOD Wiki</h1>
+        <p>このサイトは、各要素を見やすく整理した個人向けWikiです。</p>
+        <span class="badge">GitHub Pages / Static HTML</span>
+      </div>
+      <div class="badge">最終更新: 2026-07-27</div>
+    </div>
   </header>
+
+  <nav>
+    <div class="navwrap">
+      <a href="#pages">ページ一覧</a>
+      <a href="#overview">概要</a>
+      <a href="#features">主要項目</a>
+      <a href="#links">すぐ移動</a>
+    </div>
+  </nav>
+
   <main>
-    <section>
+    <section id="pages">
       <h2>ページ一覧</h2>
       <div class="grid">
-        <div class="card"><a href="races.html">種族</a><p>種族の一覧と各個別種族の入口。</p></div>
-        <div class="card"><a href="skills.html">スキル</a><p>スキル種別、ユニークスキル、耐性の入口。</p></div>
+        <div class="card"><a href="races.html">種族</a><p>種族一覧と個別ページへの入口。</p></div>
+        <div class="card"><a href="skills.html">スキル</a><p>スキル種別、ユニークスキル、耐性。</p></div>
         <div class="card"><a href="items.html">アイテム</a><p>装備、素材、Mobドロップ。</p></div>
-        <div class="card"><a href="mobs.html">Mob</a><p>Mobの一覧と個別項目の入口。</p></div>
+        <div class="card"><a href="mobs.html">Mob</a><p>Mob一覧と関連情報。</p></div>
         <div class="card"><a href="commands.html">コマンド</a><p>コマンドの記法とカテゴリ。</p></div>
         <div class="card"><a href="config.html">設定</a><p>ゲームルール、クライアント、サーバー設定。</p></div>
         <div class="card"><a href="structures.html">建造物</a><p>構造物、村、ダンジョン。</p></div>
       </div>
     </section>
+
+    <section id="overview">
+      <h2>概要</h2>
+      <p>このWikiは、見たい情報にすぐ飛べることを優先して構成しています。ページ数が増えても、トップページから迷わず移動できるようにしています。</p>
+    </section>
+
+    <section id="features">
+      <h2>主要項目</h2>
+      <table>
+        <thead>
+          <tr><th>項目</th><th>内容</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>種族</td><td>人間、エルフ、ゴブリン、オーガなど。</td></tr>
+          <tr><td>スキル</td><td>固有スキル、コモンスキル、ユニークスキルなど。</td></tr>
+          <tr><td>アイテム</td><td>素材、装備、Mobドロップ。</td></tr>
+          <tr><td>建造物</td><td>村、ダンジョン、特殊構造物。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="links">
+      <h2>すぐ移動</h2>
+      <div class="links">
+        <a href="races.html">種族</a>
+        <a href="skills.html">スキル</a>
+        <a href="items.html">アイテム</a>
+        <a href="mobs.html">Mob</a>
+        <a href="commands.html">コマンド</a>
+        <a href="config.html">設定</a>
+        <a href="structures.html">建造物</a>
+      </div>
+      <p class="note">ファイル名は英数字に統一すると、GitHub Pagesで扱いやすくなります。</p>
+    </section>
   </main>
-  <footer><p class="note">保存例: <code>index.html</code></p></footer>
+
+  <footer>
+    <p>© Tensura MOD Wiki</p>
+  </footer>
 </body>
 </html>
