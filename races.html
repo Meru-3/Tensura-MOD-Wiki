@@ -5,68 +5,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>種族 - 転生したらスライムだった件 MOD Wiki</title>
   <style>
-    body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.75;background:#f6f7fb;color:#222}
-    header,nav,main{max-width:1100px;margin:0 auto;padding:20px}
-    header{background:#1f2937;color:#fff}
-    nav{background:#fff;border-bottom:1px solid #e5e7eb;display:flex;flex-wrap:wrap;gap:10px}
-    nav a{color:#2563eb;text-decoration:none;background:#eff6ff;border:1px solid #dbeafe;border-radius:999px;padding:6px 12px}
-    section{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:20px;margin:18px 0}
-    table{width:100%;border-collapse:collapse;display:block;overflow-x:auto}
-    th,td{border:1px solid #ddd;padding:8px 10px;vertical-align:top}
-    th{background:#f3f4f6}
-    .top{float:right;text-decoration:none}
+    :root{--bg:#0f172a;--card:#fff;--line:#e5e7eb;--text:#111827;--muted:#6b7280;--accent:#2563eb;--accent2:#dbeafe}
+    body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.7;background:linear-gradient(180deg,#f8fafc 0%,#eef2ff 100%);color:var(--text)}
+    header{background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);color:#fff;padding:28px 20px}
+    .wrap{max-width:1120px;margin:0 auto}
+    .hero{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+    .title h1{margin:0 0 8px;font-size:2rem}
+    .title p{margin:0;color:#cbd5e1}
+    .badge{display:inline-block;margin-top:10px;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.15);color:#e2e8f0;font-size:.9rem}
+    nav{background:#fff;border-bottom:1px solid var(--line)}
+    .navwrap{max-width:1120px;margin:0 auto;padding:12px 20px;display:flex;gap:10px;flex-wrap:wrap}
+    .navwrap a{text-decoration:none;color:var(--accent);background:var(--accent2);border:1px solid #bfdbfe;padding:7px 12px;border-radius:999px;font-weight:600}
+    main{max-width:1120px;margin:0 auto;padding:20px}
+    section{background:rgba(255,255,255,.88);backdrop-filter:blur(6px);border:1px solid rgba(229,231,235,.9);border-radius:16px;padding:20px;margin:18px 0;box-shadow:0 8px 20px rgba(15,23,42,.05)}
+    h2{margin-top:0}
+    table{width:100%;border-collapse:collapse;display:block;overflow-x:auto;background:#fff;border-radius:12px}
+    th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;white-space:nowrap}
+    th{background:#f8fafc}
+    footer{max-width:1120px;margin:0 auto;padding:10px 20px 30px;color:var(--muted);font-size:.92rem}
   </style>
 </head>
 <body>
-  <header id="top">
-    <h1>種族</h1>
-    <p>種族の一覧と、各個別種族ページへの入口です。</p>
+  <header>
+    <div class="wrap hero">
+      <div class="title">
+        <h1>種族</h1>
+        <p>種族一覧と、各個別種族ページへの入口です。</p>
+        <span class="badge">Races</span>
+      </div>
+      <div class="badge"><a href="index.html" style="color:inherit;text-decoration:none;">ホームへ戻る</a></div>
+    </div>
   </header>
-  <nav>
-    <a href="index.html">ホーム</a>
-    <a href="#humanoid">人型</a>
-    <a href="#monster">魔物系</a>
-    <a href="#evolution">進化段階</a>
-  </nav>
+  <nav><div class="navwrap"><a href="#humanoid">人型</a><a href="#monster">魔物系</a><a href="#evolution">進化段階</a></div></nav>
   <main>
     <section id="humanoid">
-      <a class="top" href="#top">▲ 上へ</a>
       <h2>人型</h2>
       <table>
-        <thead><tr><th>種族</th><th>説明</th><th>個別ページ</th></tr></thead>
+        <thead><tr><th>種族</th><th>説明</th></tr></thead>
         <tbody>
-          <tr><td>人間</td><td>低魔素で数が多い種族。</td><td><a href="#">Human</a></td></tr>
-          <tr><td>エルフ</td><td>自然や魔力との相性が高い種族。</td><td><a href="#">Elf</a></td></tr>
-          <tr><td>ドワーフ</td><td>工芸や鍛冶に長ける種族。</td><td><a href="#">Dwarf</a></td></tr>
-          <tr><td>マーメイド</td><td>水と親和性の高い種族。</td><td><a href="#">Merfolk</a></td></tr>
-          <tr><td>獣人</td><td>獣の血を引く種族群。</td><td><a href="#">Beastfolk</a></td></tr>
-          <tr><td>ハーピー</td><td>飛行能力を持つ種族。</td><td><a href="#">Harpy</a></td></tr>
+          <tr><td>人間</td><td>低魔素で数が多い種族。</td></tr>
+          <tr><td>エルフ</td><td>自然や魔力との相性が高い種族。</td></tr>
+          <tr><td>ドワーフ</td><td>工芸や鍛冶に長ける種族。</td></tr>
+          <tr><td>マーメイド</td><td>水と親和性の高い種族。</td></tr>
+          <tr><td>獣人</td><td>獣の血を引く種族群。</td></tr>
+          <tr><td>ハーピー</td><td>飛行能力を持つ種族。</td></tr>
         </tbody>
       </table>
     </section>
     <section id="monster">
-      <a class="top" href="#top">▲ 上へ</a>
       <h2>魔物系</h2>
       <table>
-        <thead><tr><th>種族</th><th>説明</th><th>個別ページ</th></tr></thead>
+        <thead><tr><th>種族</th><th>説明</th></tr></thead>
         <tbody>
-          <tr><td>ゴブリン</td><td>小型の魔物系種族。</td><td><a href="#">Goblin</a></td></tr>
-          <tr><td>リザードマン</td><td>爬虫類系の種族。</td><td><a href="#">Lizardman</a></td></tr>
-          <tr><td>オーガ</td><td>後に鬼人系へ進化することがある。</td><td><a href="#">Ogre</a></td></tr>
-          <tr><td>オーク</td><td>獣人系の一種。</td><td><a href="#">Orc</a></td></tr>
-          <tr><td>スライム</td><td>最弱から特殊進化を持つ種族。</td><td><a href="#">Slime</a></td></tr>
-          <tr><td>ワイト</td><td>不死系の魔物。</td><td><a href="#">Wight</a></td></tr>
-          <tr><td>グール</td><td>不死系の魔物。</td><td><a href="#">Ghoul</a></td></tr>
-          <tr><td>デーモン系</td><td>魔力に優れた魔物種族群。</td><td><a href="#">Daemon</a></td></tr>
-          <tr><td>魔人系</td><td>知性を持つ魔物の総称。</td><td><a href="#">Majin</a></td></tr>
+          <tr><td>ゴブリン</td><td>小型の魔物系種族。</td></tr>
+          <tr><td>リザードマン</td><td>爬虫類系の種族。</td></tr>
+          <tr><td>オーガ</td><td>後に鬼人系へ進化することがある。</td></tr>
+          <tr><td>オーク</td><td>獣人系の一種。</td></tr>
+          <tr><td>スライム</td><td>最弱から特殊進化を持つ種族。</td></tr>
+          <tr><td>ワイト</td><td>不死系の魔物。</td></tr>
+          <tr><td>グール</td><td>不死系の魔物。</td></tr>
+          <tr><td>デーモン系</td><td>魔力に優れた魔物種族群。</td></tr>
+          <tr><td>魔人系</td><td>知性を持つ魔物の総称。</td></tr>
         </tbody>
       </table>
     </section>
-    <section id="evolution">
-      <a class="top" href="#top">▲ 上へ</a>
-      <h2>進化段階</h2>
-      <p>進化段階のある種族は、個別ページで「初期種族 → 上位種族 → 変異種族」の順に整理すると見やすくなります。</p>
-    </section>
+    <section id="evolution"><h2>進化段階</h2><p>進化段階のある種族は、個別ページで「初期種族 → 上位種族 → 変異種族」の順に整理すると見やすくなります。</p></section>
   </main>
+  <footer>© Tensura MOD Wiki</footer>
 </body>
 </html>
