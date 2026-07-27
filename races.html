@@ -5,24 +5,108 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>種族 - 転生したらスライムだった件 MOD Wiki</title>
   <style>
-    :root{--bg:#0f172a;--card:#fff;--line:#e5e7eb;--text:#111827;--muted:#6b7280;--accent:#2563eb;--accent2:#dbeafe}
-    body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.7;background:linear-gradient(180deg,#f8fafc 0%,#eef2ff 100%);color:var(--text)}
-    header{background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);color:#fff;padding:28px 20px}
-    .wrap{max-width:1120px;margin:0 auto}
-    .hero{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+    :root{
+      --bg:#0f172a;
+      --card:#fff;
+      --line:#e5e7eb;
+      --text:#111827;
+      --muted:#6b7280;
+      --accent:#2563eb;
+      --accent2:#dbeafe;
+    }
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      line-height:1.7;
+      background:linear-gradient(180deg,#f8fafc 0%,#eef2ff 100%);
+      color:var(--text);
+    }
+    header{
+      background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);
+      color:#fff;
+      padding:28px 20px;
+      box-shadow:0 8px 24px rgba(15,23,42,.12);
+    }
+    .wrap{max-width:1120px;margin:0 auto;}
+    .hero{
+      display:flex;
+      gap:18px;
+      align-items:flex-start;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
     .title h1{margin:0 0 8px;font-size:2rem}
     .title p{margin:0;color:#cbd5e1}
-    .badge{display:inline-block;margin-top:10px;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.15);color:#e2e8f0;font-size:.9rem}
-    nav{background:#fff;border-bottom:1px solid var(--line)}
-    .navwrap{max-width:1120px;margin:0 auto;padding:12px 20px;display:flex;gap:10px;flex-wrap:wrap}
-    .navwrap a{text-decoration:none;color:var(--accent);background:var(--accent2);border:1px solid #bfdbfe;padding:7px 12px;border-radius:999px;font-weight:600}
+    .badge{
+      display:inline-block;
+      margin-top:10px;
+      padding:4px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.15);
+      color:#e2e8f0;
+      font-size:.9rem;
+      text-decoration:none;
+    }
+    nav{
+      background:#fff;
+      border-bottom:1px solid var(--line);
+    }
+    .navwrap{
+      max-width:1120px;
+      margin:0 auto;
+      padding:12px 20px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .navwrap a{
+      text-decoration:none;
+      color:var(--accent);
+      background:var(--accent2);
+      border:1px solid #bfdbfe;
+      padding:7px 12px;
+      border-radius:999px;
+      font-weight:600;
+    }
     main{max-width:1120px;margin:0 auto;padding:20px}
-    section{background:rgba(255,255,255,.88);backdrop-filter:blur(6px);border:1px solid rgba(229,231,235,.9);border-radius:16px;padding:20px;margin:18px 0;box-shadow:0 8px 20px rgba(15,23,42,.05)}
+    section{
+      background:rgba(255,255,255,.88);
+      backdrop-filter:blur(6px);
+      border:1px solid rgba(229,231,235,.9);
+      border-radius:16px;
+      padding:20px;
+      margin:18px 0;
+      box-shadow:0 8px 20px rgba(15,23,42,.05);
+    }
     h2{margin-top:0}
-    table{width:100%;border-collapse:collapse;display:block;overflow-x:auto;background:#fff;border-radius:12px}
-    th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;white-space:nowrap}
+    table{
+      width:100%;
+      border-collapse:collapse;
+      display:block;
+      overflow-x:auto;
+      background:#fff;
+      border-radius:12px;
+    }
+    th,td{
+      border:1px solid var(--line);
+      padding:10px 12px;
+      text-align:left;
+      vertical-align:top;
+    }
     th{background:#f8fafc}
-    footer{max-width:1120px;margin:0 auto;padding:10px 20px 30px;color:var(--muted);font-size:.92rem}
+    .note{color:var(--muted);font-size:.95rem}
+    footer{
+      max-width:1120px;
+      margin:0 auto;
+      padding:10px 20px 30px;
+      color:var(--muted);
+      font-size:.92rem;
+    }
+    @media (max-width:640px){
+      .title h1{font-size:1.6rem}
+      section{padding:16px}
+    }
   </style>
 </head>
 <body>
@@ -30,47 +114,74 @@
     <div class="wrap hero">
       <div class="title">
         <h1>種族</h1>
-        <p>種族一覧と、各個別種族ページへの入口です。</p>
+        <p>主要な種族と、そのざっくりした特徴をまとめています。</p>
         <span class="badge">Races</span>
       </div>
-      <div class="badge"><a href="index.html" style="color:inherit;text-decoration:none;">ホームへ戻る</a></div>
+      <a class="badge" href="index.html">ホームへ戻る</a>
     </div>
   </header>
-  <nav><div class="navwrap"><a href="#humanoid">人型</a><a href="#monster">魔物系</a><a href="#evolution">進化段階</a></div></nav>
+
+  <nav>
+    <div class="navwrap">
+      <a href="#humanoid">人型・亜人</a>
+      <a href="#monster">魔物系</a>
+      <a href="#evolution">進化の流れ</a>
+    </div>
+  </nav>
+
   <main>
     <section id="humanoid">
-      <h2>人型</h2>
+      <h2>人型・亜人</h2>
       <table>
-        <thead><tr><th>種族</th><th>説明</th></tr></thead>
+        <thead>
+          <tr>
+            <th>種族</th>
+            <th>説明</th>
+            <th>主な特徴</th>
+          </tr>
+        </thead>
         <tbody>
-          <tr><td>人間</td><td>低魔素で数が多い種族。</td></tr>
-          <tr><td>エルフ</td><td>自然や魔力との相性が高い種族。</td></tr>
-          <tr><td>ドワーフ</td><td>工芸や鍛冶に長ける種族。</td></tr>
-          <tr><td>マーメイド</td><td>水と親和性の高い種族。</td></tr>
-          <tr><td>獣人</td><td>獣の血を引く種族群。</td></tr>
-          <tr><td>ハーピー</td><td>飛行能力を持つ種族。</td></tr>
+          <tr><td>人間</td><td>最も基本的な種族。</td><td>数が多い、技術に頼る、魔力は少なめ。</td></tr>
+          <tr><td>エルフ</td><td>自然や魔力との相性が良い種族。</td><td>長命、魔法向き、知的。</td></tr>
+          <tr><td>ドワーフ</td><td>鍛冶や工芸に優れた種族。</td><td>職人気質、技術力が高い。</td></tr>
+          <tr><td>マーマン</td><td>水棲の亜人種族。</td><td>水中適性が高い。</td></tr>
+          <tr><td>獣人</td><td>獣の性質を持つ亜人の総称。</td><td>身体能力が高い、種族差が大きい。</td></tr>
+          <tr><td>ハーピィ</td><td>鳥の特徴を持つ種族。</td><td>飛行に強い、空中戦向き。</td></tr>
         </tbody>
       </table>
     </section>
+
     <section id="monster">
       <h2>魔物系</h2>
       <table>
-        <thead><tr><th>種族</th><th>説明</th></tr></thead>
+        <thead>
+          <tr>
+            <th>種族</th>
+            <th>説明</th>
+            <th>主な特徴</th>
+          </tr>
+        </thead>
         <tbody>
-          <tr><td>ゴブリン</td><td>小型の魔物系種族。</td></tr>
-          <tr><td>リザードマン</td><td>爬虫類系の種族。</td></tr>
-          <tr><td>オーガ</td><td>後に鬼人系へ進化することがある。</td></tr>
-          <tr><td>オーク</td><td>獣人系の一種。</td></tr>
-          <tr><td>スライム</td><td>最弱から特殊進化を持つ種族。</td></tr>
-          <tr><td>ワイト</td><td>不死系の魔物。</td></tr>
-          <tr><td>グール</td><td>不死系の魔物。</td></tr>
-          <tr><td>デーモン系</td><td>魔力に優れた魔物種族群。</td></tr>
-          <tr><td>魔人系</td><td>知性を持つ魔物の総称。</td></tr>
+          <tr><td>ゴブリン</td><td>小型の魔物系種族。</td><td>数で押す、進化の余地がある。</td></tr>
+          <tr><td>リザードマン</td><td>トカゲ型の魔物系種族。</td><td>水辺に強い、部族文化がある。</td></tr>
+          <tr><td>鬼</td><td>オーガ系の上位種族。</td><td>高い戦闘力、鬼人への進化がある。</td></tr>
+          <tr><td>オーク</td><td>豚頭型の魔物系種族。</td><td>集団性が高い、進化後に大きく変化する。</td></tr>
+          <tr><td>スライム</td><td>粘性生物の代表格。</td><td>特殊進化が多い、主人公種族。</td></tr>
+          <tr><td>ワイト</td><td>不死系の魔物。</td><td>霊的な存在に近い。</td></tr>
+          <tr><td>グール</td><td>不死系の魔物。</td><td>肉体が損傷しても戦える。</td></tr>
+          <tr><td>レッサーデーモン</td><td>悪魔系の下位種族。</td><td>魔力に優れる。</td></tr>
+          <tr><td>ジャイアント</td><td>巨大な体を持つ種族。</td><td>物理的な圧力が高い。</td></tr>
         </tbody>
       </table>
     </section>
-    <section id="evolution"><h2>進化段階</h2><p>進化段階のある種族は、個別ページで「初期種族 → 上位種族 → 変異種族」の順に整理すると見やすくなります。</p></section>
+
+    <section id="evolution">
+      <h2>進化の流れ</h2>
+      <p>種族によっては、進化で見た目や能力が大きく変わります。たとえば、ゴブリン系は上位種へ、オーガ系は鬼人系へ、スライム系は特別な上位形態へ進むことがあります。</p>
+      <p class="note">あとで個別ページを増やすなら、この欄を「進化ツリー」にしても見やすいです。</p>
+    </section>
   </main>
+
   <footer>© Tensura MOD Wiki</footer>
 </body>
 </html>
