@@ -5,43 +5,291 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>スキル - 転生したらスライムだった件 MOD Wiki</title>
   <style>
-    :root{--bg:#0f172a;--card:#fff;--line:#e5e7eb;--text:#111827;--muted:#6b7280;--accent:#2563eb;--accent2:#dbeafe}
-    body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.7;background:linear-gradient(180deg,#f8fafc 0%,#eef2ff 100%);color:var(--text)}
-    header{background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);color:#fff;padding:28px 20px}
-    .wrap{max-width:1120px;margin:0 auto}
-    .hero{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+    :root{
+      --bg:#0f172a;
+      --card:#fff;
+      --line:#e5e7eb;
+      --text:#111827;
+      --muted:#6b7280;
+      --accent:#2563eb;
+      --accent2:#dbeafe;
+    }
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      line-height:1.7;
+      background:linear-gradient(180deg,#f8fafc 0%,#eef2ff 100%);
+      color:var(--text);
+    }
+    header{
+      background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);
+      color:#fff;
+      padding:28px 20px;
+      box-shadow:0 8px 24px rgba(15,23,42,.12);
+    }
+    .wrap{max-width:1120px;margin:0 auto;}
+    .hero{
+      display:flex;
+      gap:18px;
+      align-items:flex-start;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
     .title h1{margin:0 0 8px;font-size:2rem}
     .title p{margin:0;color:#cbd5e1}
-    .badge{display:inline-block;margin-top:10px;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.15);color:#e2e8f0;font-size:.9rem}
-    nav{background:#fff;border-bottom:1px solid var(--line)}
-    .navwrap{max-width:1120px;margin:0 auto;padding:12px 20px;display:flex;gap:10px;flex-wrap:wrap}
-    .navwrap a{text-decoration:none;color:var(--accent);background:var(--accent2);border:1px solid #bfdbfe;padding:7px 12px;border-radius:999px;font-weight:600}
+    .badge{
+      display:inline-block;
+      margin-top:10px;
+      padding:4px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.15);
+      color:#e2e8f0;
+      font-size:.9rem;
+      text-decoration:none;
+    }
+    nav{
+      background:#fff;
+      border-bottom:1px solid var(--line);
+    }
+    .navwrap{
+      max-width:1120px;
+      margin:0 auto;
+      padding:12px 20px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .navwrap a{
+      text-decoration:none;
+      color:var(--accent);
+      background:var(--accent2);
+      border:1px solid #bfdbfe;
+      padding:7px 12px;
+      border-radius:999px;
+      font-weight:600;
+    }
     main{max-width:1120px;margin:0 auto;padding:20px}
-    section{background:rgba(255,255,255,.88);backdrop-filter:blur(6px);border:1px solid rgba(229,231,235,.9);border-radius:16px;padding:20px;margin:18px 0;box-shadow:0 8px 20px rgba(15,23,42,.05)}
+    section{
+      background:rgba(255,255,255,.88);
+      backdrop-filter:blur(6px);
+      border:1px solid rgba(229,231,235,.9);
+      border-radius:16px;
+      padding:20px;
+      margin:18px 0;
+      box-shadow:0 8px 20px rgba(15,23,42,.05);
+    }
     h2{margin-top:0}
-    table{width:100%;border-collapse:collapse;display:block;overflow-x:auto;background:#fff;border-radius:12px}
-    th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;white-space:nowrap}
+    table{
+      width:100%;
+      border-collapse:collapse;
+      display:block;
+      overflow-x:auto;
+      background:#fff;
+      border-radius:12px;
+    }
+    th,td{
+      border:1px solid var(--line);
+      padding:10px 12px;
+      text-align:left;
+      vertical-align:top;
+    }
     th{background:#f8fafc}
-    footer{max-width:1120px;margin:0 auto;padding:10px 20px 30px;color:var(--muted);font-size:.92rem}
+    .note{color:var(--muted);font-size:.95rem}
+    footer{
+      max-width:1120px;
+      margin:0 auto;
+      padding:10px 20px 30px;
+      color:var(--muted);
+      font-size:.92rem;
+    }
+    @media (max-width:640px){
+      .title h1{font-size:1.6rem}
+      section{padding:16px}
+    }
   </style>
 </head>
 <body>
-  <header><div class="wrap hero"><div class="title"><h1>スキル</h1><p>スキル種別、ユニークスキル、耐性の入口です。</p><span class="badge">Skills</span></div><div class="badge"><a href="index.html" style="color:inherit;text-decoration:none;">ホームへ戻る</a></div></div></header>
-  <nav><div class="navwrap"><a href="#types">種別</a><a href="#intrinsic">固有スキル</a><a href="#common">コモンスキル</a><a href="#extra">エクストラスキル</a><a href="#unique">ユニークスキル</a><a href="#resistance">耐性</a></div></nav>
+  <header>
+    <div class="wrap hero">
+      <div class="title">
+        <h1>スキル</h1>
+        <p>能力・スキル・耐性を分類して整理します。</p>
+        <span class="badge">Skills</span>
+      </div>
+      <a class="badge" href="index.html">ホームへ戻る</a>
+    </div>
+  </header>
+
+  <nav>
+    <div class="navwrap">
+      <a href="#abilities">能力</a>
+      <a href="#common">コモンスキル</a>
+      <a href="#intrinsic">固有スキル</a>
+      <a href="#extra">エクストラスキル</a>
+      <a href="#unique">ユニークスキル</a>
+      <a href="#resist">耐性</a>
+    </div>
+  </nav>
+
   <main>
-    <section id="types"><h2>種別</h2><p>wiki.gg では、スキルは固有スキル、コモンスキル、エクストラスキル、ユニークスキル、耐性に分かれています。</p></section>
-    <section id="intrinsic"><h2>固有スキル</h2><p>種族や存在そのものに由来するスキルです。</p></section>
-    <section id="common"><h2>コモンスキル</h2><p>比較的基本的なスキルです。</p></section>
-    <section id="extra"><h2>エクストラスキル</h2><p>より強力で特殊なスキルです。</p></section>
+    <section id="abilities">
+      <h2>能力の全体像</h2>
+      <p>このページでは、スキルを大きく「コモン」「固有」「エクストラ」「ユニーク」「耐性」に分けて整理します。あとで個別ページを増やしても、そのまま流用しやすい構成です。</p>
+    </section>
+
+    <section id="common">
+      <h2>コモンスキル</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>名称</th>
+            <th>説明</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>強制</td><td>対象に圧をかけて動きを制御する系統。</td></tr>
+          <tr><td>腐食</td><td>対象を侵食する攻撃系スキル。</td></tr>
+          <tr><td>ファーサイト</td><td>遠くを見るための視覚補助。</td></tr>
+          <tr><td>重力場</td><td>重力を局所的に操作する。</td></tr>
+          <tr><td>グラビティ・フライト</td><td>重力を利用した飛行。</td></tr>
+          <tr><td>油圧推進</td><td>水圧を利用して素早く動く。</td></tr>
+          <tr><td>麻痺</td><td>対象の行動を鈍らせる。</td></tr>
+          <tr><td>毒</td><td>毒性を付与する。</td></tr>
+          <tr><td>遠距離バリア</td><td>離れた位置から防御壁を展開する。</td></tr>
+          <tr><td>自己再生</td><td>傷を回復する。</td></tr>
+          <tr><td>強さ</td><td>単純な身体能力補正。</td></tr>
+          <tr><td>テレパシー</td><td>思考で通信する。</td></tr>
+          <tr><td>思考伝達</td><td>念話のように情報を送る。</td></tr>
+          <tr><td>ボイスキャノン</td><td>音波を攻撃に変える。</td></tr>
+          <tr><td>ウォーターブレード</td><td>水を刃として扱う。</td></tr>
+          <tr><td>水流制御</td><td>水の流れを自在に制御する。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="intrinsic">
+      <h2>固有スキル</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>名称</th>
+            <th>説明</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>吸収＆溶解</td><td>対象を取り込み、解体する。</td></tr>
+          <tr><td>獣への変身</td><td>獣化・変身に関わる。</td></tr>
+          <tr><td>血の霧</td><td>血を霧状に扱う。</td></tr>
+          <tr><td>ボディアーマー</td><td>肉体を防具のように強化する。</td></tr>
+          <tr><td>魅力</td><td>相手を引きつける作用を持つ。</td></tr>
+          <tr><td>闇の変容</td><td>闇属性へ変化する。</td></tr>
+          <tr><td>神聖なる気の解放</td><td>聖性のある気を放つ。</td></tr>
+          <tr><td>ドラゴンイヤー</td><td>聴覚を強化する。</td></tr>
+          <tr><td>ドラゴンアイ</td><td>視覚を強化する。</td></tr>
+          <tr><td>ドラゴンモード</td><td>竜系の形態変化。</td></tr>
+          <tr><td>ドラゴンスキン</td><td>防御力を高める皮膚特性。</td></tr>
+          <tr><td>ドレイン</td><td>対象から力を吸い取る。</td></tr>
+          <tr><td>真実の目</td><td>対象を見抜く。</td></tr>
+          <tr><td>炎のブレス</td><td>火炎を吐く。</td></tr>
+          <tr><td>空間変換</td><td>空間を使う移動・変化。</td></tr>
+          <tr><td>水中呼吸</td><td>水中での呼吸を可能にする。</td></tr>
+          <tr><td>風の変形</td><td>風属性への変化。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="extra">
+      <h2>エクストラスキル</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>名称</th>
+            <th>説明</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>全知の目</td><td>分析・観測系の高位スキル。</td></tr>
+          <tr><td>分析評価</td><td>対象を分析する。</td></tr>
+          <tr><td>黒炎</td><td>特殊な火炎を扱う。</td></tr>
+          <tr><td>ブラックライトニング</td><td>黒い雷を操る。</td></tr>
+          <tr><td>危険察知</td><td>危険の接近を感知する。</td></tr>
+          <tr><td>魔王の覇気</td><td>強い威圧を放つ。</td></tr>
+          <tr><td>英雄の覇気</td><td>英雄格の覇気。</td></tr>
+          <tr><td>無限再生</td><td>高性能な再生能力。</td></tr>
+          <tr><td>空間支配</td><td>空間を支配する。</td></tr>
+          <tr><td>普遍的な知覚</td><td>広い認識能力。</td></tr>
+          <tr><td>魔法の感覚</td><td>魔力を感知する。</td></tr>
+          <tr><td>思考加速</td><td>思考速度を上げる。</td></tr>
+          <tr><td>超高速再生</td><td>高速で自己修復する。</td></tr>
+          <tr><td>水の操作</td><td>水を自在に操る。</td></tr>
+          <tr><td>風の支配</td><td>風を支配する。</td></tr>
+          <tr><td>鋼の強度</td><td>身体を鋼のように強化する。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
     <section id="unique">
       <h2>ユニークスキル</h2>
       <table>
-        <thead><tr><th>名称</th><th>備考</th></tr></thead>
-        <tbody><tr><td>大賢者</td><td>代表的なユニークスキル。</td></tr><tr><td>暴食</td><td>捕食系の代表例。</td></tr><tr><td>絶対切断</td><td>攻撃系ユニークスキルの一例。</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>名称</th>
+            <th>説明</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>大賢者</td><td>代表的な知性系ユニークスキル。</td></tr>
+          <tr><td>捕食者</td><td>対象を取り込み、能力を得る。</td></tr>
+          <tr><td>暴食</td><td>捕食の上位系として扱われることが多い。</td></tr>
+          <tr><td>貪欲</td><td>欲求や回収に関わる。</td></tr>
+          <tr><td>退化する</td><td>対象の状態を変化させる。</td></tr>
+          <tr><td>守護者</td><td>防御や保護に関わる。</td></tr>
+          <tr><td>神聖なる狂戦士</td><td>聖性と戦闘性を併せ持つ。</td></tr>
+          <tr><td>研究者</td><td>解析・調査に向いたスキル。</td></tr>
+          <tr><td>旅行者</td><td>移動・探索に関わる。</td></tr>
+          <tr><td>憤怒</td><td>怒りを力に変える。</td></tr>
+          <tr><td>飢えた</td><td>欠乏や捕食に結びつく。</td></tr>
+          <tr><td>抑圧者</td><td>相手を押さえつける。</td></tr>
+          <tr><td>簒奪者</td><td>奪う性質を持つ。</td></tr>
+          <tr><td>悪役</td><td>敵対的な性質を表す。</td></tr>
+          <tr><td>不屈</td><td>折れにくい精神・肉体を表す。</td></tr>
+        </tbody>
       </table>
     </section>
-    <section id="resistance"><h2>耐性</h2><p>属性や状態異常への耐性を与えるスキルです。</p></section>
+
+    <section id="resist">
+      <h2>耐性</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>名称</th>
+            <th>説明</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>異常状態無効化</td><td>状態異常を受けない。</td></tr>
+          <tr><td>異常状態耐性</td><td>状態異常に強くなる。</td></tr>
+          <tr><td>冷気無効化</td><td>冷気ダメージを受けない。</td></tr>
+          <tr><td>耐寒性</td><td>寒さに強い。</td></tr>
+          <tr><td>腐食無効化</td><td>腐食効果を無効化する。</td></tr>
+          <tr><td>闇の攻撃無効化</td><td>闇属性攻撃を無効化する。</td></tr>
+          <tr><td>電気無効化</td><td>雷・電気攻撃を無効化する。</td></tr>
+          <tr><td>炎攻撃無効化</td><td>炎属性攻撃を無効化する。</td></tr>
+          <tr><td>重力攻撃耐性</td><td>重力系攻撃に強くなる。</td></tr>
+          <tr><td>魔法無効化</td><td>魔法攻撃を無効化する。</td></tr>
+          <tr><td>痛み無効化</td><td>痛覚を遮断する。</td></tr>
+          <tr><td>麻痺耐性</td><td>麻痺に強くなる。</td></tr>
+          <tr><td>物理攻撃耐性</td><td>物理攻撃に強くなる。</td></tr>
+          <tr><td>毒無効化</td><td>毒を受けない。</td></tr>
+          <tr><td>空間攻撃耐性</td><td>空間系攻撃に強くなる。</td></tr>
+          <tr><td>霊的攻撃無効化</td><td>霊的攻撃を無効化する。</td></tr>
+          <tr><td>水攻撃耐性</td><td>水属性攻撃に強くなる。</td></tr>
+        </tbody>
+      </table>
+    </section>
   </main>
+
   <footer>© Tensura MOD Wiki</footer>
 </body>
 </html>
